@@ -25,6 +25,14 @@ public abstract class Player {
 
     public abstract void damage(int amount);
 
+    public void heal(int amount) {
+        this.health += amount;
+
+        if (this.health > 50) {
+            this.health = 50;
+        }
+    }
+
     public void collectTreasure(int amount) {
         this.treasure += amount;
     }
